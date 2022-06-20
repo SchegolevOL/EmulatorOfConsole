@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyConsole.App
+﻿namespace Consol
 {
     public static class Consol
     {
@@ -25,13 +19,22 @@ namespace MyConsole.App
                     Console.WriteLine(
                         $"  File system: {d.DriveFormat}");
                     Console.WriteLine(
-                        $"  Available space to current user:{d.AvailableFreeSpace, 15} bytes");
+                        $"  Available space to current user:{d.AvailableFreeSpace,15} bytes");
                     Console.WriteLine(
-                        $"  Total available space:          {d.TotalFreeSpace, 15} bytes");
+                        $"  Total available space:          {d.TotalFreeSpace,15} bytes");
                     Console.WriteLine(
-                        $"  Total size of drive:            {d.TotalSize, 15} bytes ");
+                        $"  Total size of drive:            {d.TotalSize,15} bytes ");
                 }
             }
         }
+        public static void Help()
+        {
+            Console.WriteLine("drive info - выводит список дисков");
+        }
+        public void GetFiles()
+        {
+            string[] files = DriveInfo.G
+        }
+
     }
 }

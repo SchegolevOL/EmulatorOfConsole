@@ -1,22 +1,25 @@
-﻿using System;
+﻿using System.Text;
+using Consol;
 
-namespace MyConsole.App
+namespace Consol.App
 {
     public class Program
     {
         static void Main(string[] args)
         {
             string str;
-
             do
             {
                 str = Console.ReadLine();
-                string[] consol = str.Split('-');
-                switch (consol[0])
+                switch (str)
                 {
-                    case ("driver info"):
+                    case ("drive info"):
                         Consol.MyDriveInfo();
                         break;
+                    case ("help"):
+                        Consol.Help();
+                        break;
+
                     default:
                         break;
                 }
