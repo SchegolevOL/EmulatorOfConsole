@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Heroes.Lib
+namespace Heroes.Lib.Weapons
 {
     public abstract class Weapon
     {
         public int Damage { get; }
-        protected Weapon(int damage)
+        public string Name { get; }
+        protected Weapon(string name, int damage)
         {
+            Name = name;
             Damage = damage;
         }
     }
